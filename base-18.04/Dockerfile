@@ -44,4 +44,4 @@ ENV PKG_CONFIG_PATH=${MILK_INSTALLD}/milk-${MILK_VERSION}/lib/pkgconfig:${PKG_CO
 RUN git clone https://github.com/milk-org/milk.git && \
     cd milk && \
     ./fetch_cacao_dev.sh && \
-    ./compile.sh $MILK_INSTALLDIR
+    CMAKE_OPT="-DUSE_CUDA=ON" ./compile.sh $MILK_INSTALLDIR

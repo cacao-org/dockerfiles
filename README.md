@@ -40,7 +40,7 @@ cd base-18.04
 ### test locally
 
 ```bash
-run --gpus all -it --rm cacao4ao/base-18.04:10.2
+docker run --gpus all -it --rm -h cacao-docker cacao4ao/base-18.04:10.2
 ```
 
 ### push a new version
